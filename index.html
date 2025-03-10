@@ -5,30 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Zadań</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Lista Zadań</h1>
-        <div class="task-input">
-            <input type="text" id="taskText" placeholder="Wpisz zadanie...">
-            <select id="taskPriority">
+<body class="bg-gray-900 text-white">
+    <div class="max-w-2xl mx-auto mt-10 p-6 bg-gray-800 rounded-xl shadow-lg">
+        <h1 class="text-2xl font-bold text-center">📋 Lista Zadań</h1>
+
+        <!-- Wybór użytkownika -->
+        <div class="mt-4">
+            <label for="userSelect" class="block text-sm font-medium">👤 Wybierz użytkownika:</label>
+            <select id="userSelect" class="mt-1 block w-full p-2 rounded-md bg-gray-700 border border-gray-600 focus:ring focus:ring-blue-500">
+                <option value="Adam">Adam</option>
+                <option value="Ewa">Ewa</option>
+                <option value="Jan">Jan</option>
+            </select>
+        </div>
+
+        <!-- Dodawanie zadania -->
+        <div class="mt-4 flex gap-2">
+            <input type="text" id="taskText" placeholder="Wpisz zadanie..." class="w-full p-2 rounded-md bg-gray-700 border border-gray-600 focus:ring focus:ring-blue-500">
+            <button id="addTask" class="px-4 py-2 bg-blue-500 rounded-md hover:bg-blue-600">➕</button>
+        </div>
+
+        <!-- Priorytet i kategoria -->
+        <div class="mt-4 flex gap-2">
+            <select id="taskPriority" class="flex-1 p-2 rounded-md bg-gray-700 border border-gray-600">
                 <option value="low">Niski</option>
                 <option value="medium">Średni</option>
                 <option value="high">Wysoki</option>
             </select>
-            <select id="taskCategory">
+            <select id="taskCategory" class="flex-1 p-2 rounded-md bg-gray-700 border border-gray-600">
                 <option value="praca">Praca</option>
                 <option value="nauka">Nauka</option>
                 <option value="hobby">Hobby</option>
             </select>
-            <button id="addTask">Dodaj</button>
         </div>
-        <div class="filters">
-            <button id="filterAll">Wszystkie</button>
-            <button id="filterPending">Do zrobienia</button>
-            <button id="filterDone">Zakończone</button>
+
+        <!-- Filtry -->
+        <div class="mt-4 flex gap-2">
+            <button id="filterAll" class="flex-1 px-4 py-2 bg-gray-700 rounded-md hover:bg-gray-600">🔍 Wszystkie</button>
+            <button id="filterPending" class="flex-1 px-4 py-2 bg-yellow-500 rounded-md hover:bg-yellow-600">🕒 Do zrobienia</button>
+            <button id="filterDone" class="flex-1 px-4 py-2 bg-green-500 rounded-md hover:bg-green-600">✅ Zakończone</button>
         </div>
-        <ul id="taskList"></ul>
+
+        <!-- Lista zadań -->
+        <ul id="taskList" class="mt-6 space-y-3"></ul>
+
+        <!-- Usuwanie wszystkiego -->
+        <button id="clearAllTasks" class="mt-6 w-full py-2 bg-red-500 rounded-md hover:bg-red-600">🗑️ Wyczyść wszystkie</button>
     </div>
     <script src="js/task.js"></script>
     <script src="js/taskManager.js"></script>

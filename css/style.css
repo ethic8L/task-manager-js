@@ -1,53 +1,53 @@
 body{
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     text-align: center;
-    margin: 20px;
-}
-
-.container{
-    width: 400px;
-    margin: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: auto;
-}
-
-.task-input{
-    display: flex;
-    gap: 10px;
-}
-
-input{
-    flex: 1;
-    padding: 8px;
-}
-
-button{
-    padding: 8px 15px;
-    cursor: pointer;
-}
-
-.filters{
-    margin: 10px 0;
-}
-
-ul{
-    list-style: none;
-    padding: 0;
 }
 
 .task {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    background: #ddd;
-    padding: 5px;
-    margin: 5px 0;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #2d2d2d;
+    border-left: 4px solid #888;
+    transition: all 0.3s ease-in-out;
 }
 
-.task.done{
+.task.done {
+    background: #1e7e34;
+    border-left: 4px solid #28a745;
     text-decoration: line-through;
-    background: #aaffaa;
+    color: #ccc;
+}
+
+.task:hover {
+    background: #444;
+    transform: scale(1.02);
+}
+
+.task .task-id {
+    font-weight: bold;
+    margin-right: 8px;
+    color: #bbb;
+}
+
+input, select {
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #2d2d2d;
+    color: white;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0px 0px 5px #4a90e2;
+}
+
+button {
+    padding: 4px 8px;
+    font-size: 15px;
 }
