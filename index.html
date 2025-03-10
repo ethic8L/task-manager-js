@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Zadań</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista Zadań</h1>
+        <div class="task-input">
+            <input type="text" id="taskText" placeholder="Wpisz zadanie...">
+            <button id="addTask">Dodaj</button>
+        </div>
+        <div class="filters">
+            <button id="filterAll">Wszystkie</button>
+            <button id="filterPending">Do zrobienia</button>
+            <button id="filterDone">Zakończone</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="js/task.js"></script>
+    <script src="js/taskManager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

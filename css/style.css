@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 20px;
+}
+
+.container{
+    width: 400px;
+    margin: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.task-input{
+    display: flex;
+    gap: 10px;
+}
+
+input{
+    flex: 1;
+    padding: 8px;
+}
+
+button{
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.filters{
+    margin: 10px 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    background: #ddd;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.task.done{
+    text-decoration: line-through;
+    background: #aaffaa;
+}
